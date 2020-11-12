@@ -73,3 +73,70 @@ Buster dog
 Shih-tzu is owned by Christy
 (10 points) 
 """
+
+class dogs:
+    animal= None
+    breed= None
+    name= None
+    owner= None
+    birthday= None
+    
+    def __init__(self):
+
+        self.animal=input("Enter In the Type of Animal here: ")
+        self.breed=input("Enter in the type of breed here: ")
+        self.name=input("Enter in the Name of the animal here: ")
+        self.owner=input("Enter in the name of the owner here: ")
+        self.birthday=input("Enter in the birthdate of the animal here: ")
+        print("\n")
+    
+    def displaypet(self):
+        print("The Animal is a " +self.animal)
+        print("The breed is "+self.breed)
+        print("The name of the pet is "+ self.name+"and the owner is "+self.owner)
+        print("The pets birthday is "+self.birthday)
+        print('\n')
+    def exit(self):
+        exit()
+
+def Main():
+    print("Welcome to the vet data base")
+    print("Type 1 if you would like to add a pet")
+    print("Type 2 two if you would like to look at the data of a pet")
+    print('Type 3 three if you would like to exit')
+    (x)=input("Enter in your choice here: ")
+    print('\n')
+    x=int(x)
+    if x==1:
+        # instantiate an object
+        
+        data.append(dogs())
+
+    elif x==2:
+        
+        # get the name of the pet
+        # cycle through all of the objects in the list to see if the name matches
+        # save the index of the object that matches
+        # use index to retrieve the rest of of the information
+        x=input("Enter in the name of the pet: ")
+        print("\n")
+     
+        for i in data:
+            if x==i.name:
+                dogs.displaypet(i)
+            else:
+                print("Not a pet we have please try again")
+                print('\n')
+                Main()
+    elif x==3:
+        exit()
+    else:
+        print("that is not a valid input please try again")
+        Main()
+
+
+
+data=[]
+while True:
+    Main()
+    print(data)
